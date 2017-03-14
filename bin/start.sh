@@ -1,5 +1,5 @@
 #!/bin/sh
-SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE:dev}
+SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE:-dev}
 JAVA_OPTS="-server -Xss256k $JAVA_OPTS"
 JAVA_OPTS="${JAVA_OPTS} -XX:SurvivorRatio=10"
 JAVA_OPTS="${JAVA_OPTS} -XX:+UseConcMarkSweepGC  -XX:CMSMaxAbortablePrecleanTime=5000 -XX:+CMSClassUnloadingEnabled -XX:CMSInitiatingOccupancyFraction=80"
